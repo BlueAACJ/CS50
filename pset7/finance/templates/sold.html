@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sold
+{% endblock %}
+
+{% block main %}
+    <p>
+        Compraste {{shares}} acciones de {{symbol}} a el precio de {price} el total es de {{total}}
+    </p>
+    <p>
+        Tienes en la cuenta {{cash}}
+    </p>
+{% endblock %}

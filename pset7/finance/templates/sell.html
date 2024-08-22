@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <form action = "/sell" method = "post">
+        <p>Me gustaria vender <input autocomplete = "off" autofocus class = "form-control" name = "shares" type = "text"/> acciones de
+        <select name = "symbol">
+            {%for name in names%}
+                <option value = "{{name}}">{{name}}</option>
+            {% endfor%}
+        </select>
+        <button class = "btn btn-primary" type = "submit">Make Sale</button>
+    </form>
+{% endblock %}
